@@ -10,11 +10,6 @@ const listener = app.listen(process.env.PORT || 3000, () => {
 
 app.use(express.static(path.resolve(__dirname, './my-app/build')));
 
-// Example
-// app.get("/", function (req, res) {
-//   res.json({message: "Hello world!"});
-// });
-
 app.use("/", userRoutes);
 
 app.get("/close", function(){

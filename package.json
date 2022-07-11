@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Referal program",
   "main": "index.js",
+  "engines": {
+    "node": "v16.15.0"
+  },
   "scripts": {
     "start": "node server.js",
     "build": "cd client && npm install && npm run build",
