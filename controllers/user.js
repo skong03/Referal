@@ -12,8 +12,10 @@ const newUser = (req, res, next) =>{
 };
 
 const getUserById = (req, res, next) =>{
-    db.query("select * from refer_user", null);
-    res.json({message: "get User By Id"+req.params.id}); 
+    db.query("select * from refer_user", null).then((result)=>{
+        console.log(result);
+        res.json(result);
+    });
 };
 
 const deleteUserById = (req, res, next) =>{

@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App2 from './App2/App2';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+//console.log(params.userId);
+//http://localhost:3001/user?userId=1
 root.render(
   <React.StrictMode>
-    <App />
+    <App2 userId={params.userId}/>
   </React.StrictMode>
 );
 
